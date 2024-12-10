@@ -19,11 +19,15 @@ const AppointmentForm = () => {
   const [hasVisited, setHasVisited] = useState(false);
 
   const departmentsArray = [
-    "Mahindra",
-    "Toyota",
-    "Indigo",
-    "Nano",
-    "Maruti",
+    "Pediatrics",
+    "Orthopedics",
+    "Cardiology",
+    "Neurology",
+    "Oncology",
+    "Radiology",
+    "Physical Therapy",
+    "Dermatology",
+    "ENT",
   ];
 
   const [doctors, setDoctors] = useState([]);
@@ -86,7 +90,7 @@ const AppointmentForm = () => {
   return (
     <>
       <div className="container form-component appointment-form">
-        <h2>Booking</h2>
+        <h2>Appointment</h2>
         <form onSubmit={handleAppointment}>
           <div>
             <input
@@ -138,7 +142,7 @@ const AppointmentForm = () => {
             </select>
             <input
               type="date"
-              placeholder="Booking Date"
+              placeholder="Appointment Date"
               value={appointmentDate}
               onChange={(e) => setAppointmentDate(e.target.value)}
             />
@@ -169,7 +173,7 @@ const AppointmentForm = () => {
               }}
               disabled={!department}
             >
-              <option value="">Select Driver</option>
+              <option value="">Select Doctor</option>
               {doctors
                 .filter((doctor) => doctor.doctorDepartment === department)
                 .map((doctor, index) => (
@@ -195,7 +199,7 @@ const AppointmentForm = () => {
               flexDirection: "row",
             }}
           >
-            <p style={{ marginBottom: 0 }}>Have you booked before?</p>
+            <p style={{ marginBottom: 0 }}>Have you visited before?</p>
             <input
               type="checkbox"
               checked={hasVisited}
@@ -203,7 +207,7 @@ const AppointmentForm = () => {
               style={{ flex: "none", width: "25px" }}
             />
           </div>
-          <button style={{ margin: "0 auto" }}>GET Booking</button>
+          <button style={{ margin: "0 auto" }}>GET APPOINTMENT</button>
         </form>
       </div>
     </>

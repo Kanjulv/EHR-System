@@ -7,12 +7,12 @@ const Hero = ({ title, imageUrl }) => {
         <div className="banner">
           <h1>{title}</h1>
           <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Our EHR System is a state-of-the-art facility dedicated
+            to providing comprehensive healthcare services with compassion and
+            expertise. Our team is committed to
+            delivering personalized care tailored to each patient's needs. 
+            We prioritize pateint's well-being, ensuring a harmonious
+            journey towards optimal health and wellness.
           </p>
         </div>
         <div className="banner">

@@ -22,13 +22,15 @@ const AddNewDoctor = () => {
   const navigateTo = useNavigate();
 
   const departmentsArray = [
-    "Maruti",
-    "Indigo",
-    "Mercedes",
-    "Nano",
-    "Mahindra",
-    "Swift",
-    " Alto",
+    "Pediatrics",
+    "Orthopedics",
+    "Cardiology",
+    "Neurology",
+    "Oncology",
+    "Radiology",
+    "Physical Therapy",
+    "Dermatology",
+    "ENT",
   ];
 
   const handleAvatar = (e) => {
@@ -84,7 +86,8 @@ const AddNewDoctor = () => {
   return (
     <section className="page">
       <section className="container add-doctor-form">
-        <h1 className="form-title">REGISTER A NEW Driver</h1>
+        <img src="/logo.png" alt="logo" className="logo"/>
+        <h1 className="form-title">REGISTER A NEW DOCTOR</h1>
         <form onSubmit={handleAddNewDoctor}>
           <div className="first-wrapper">
             <div>
@@ -92,7 +95,7 @@ const AddNewDoctor = () => {
                 src={
                   docAvatarPreview ? `${docAvatarPreview}` : "/docHolder.jpg"
                 }
-                alt="Driver Avatar"
+                alt="Doctor Avatar"
               />
               <input type="file" onChange={handleAvatar} />
             </div>
@@ -153,7 +156,7 @@ const AddNewDoctor = () => {
                   setDoctorDepartment(e.target.value);
                 }}
               >
-                <option value="">Select Vehicle</option>
+                <option value="">Select Department</option>
                 {departmentsArray.map((depart, index) => {
                   return (
                     <option value={depart} key={index}>
@@ -162,7 +165,7 @@ const AddNewDoctor = () => {
                   );
                 })}
               </select>
-              <button type="submit">Register New Driver</button>
+              <button type="submit">Register New Doctor</button>
             </div>
           </div>
         </form>

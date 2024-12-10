@@ -33,6 +33,7 @@ const Navbar = () => {
     <>
       <nav className={"container"}>
         <div className="logo">
+          <img src="/logo.png" alt="logo" className="logo-img" />
         </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
@@ -40,7 +41,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link to={"/appointment"} onClick={() => setShow(!show)}>
-              Booking
+              Appointment
             </Link>
             <Link to={"/about"} onClick={() => setShow(!show)}>
               About Us

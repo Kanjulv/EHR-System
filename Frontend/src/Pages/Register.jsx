@@ -21,31 +21,30 @@ const Register = () => {
   const handleRegistration = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "http://localhost:4000/api/v1/user/patient/register",
-        { firstName, lastName, email, phone, nic, dob, gender, password },
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      toast.success(res.data.message);
-      setIsAuthenticated(true);
-      navigateTo("/");
-      // Reset form fields
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPhone("");
-      setNic("");
-      setDob("");
-      setGender("");
-      setPassword("");
+      await axios
+        .post(
+          "http://localhost:4000/api/v1/user/patient/register",
+          { firstName, lastName, email, phone, nic, dob, gender, password },
+          {
+            withCredentials: true,
+            headers: { "Content-Type": "application/json" },
+          }
+        )
+        .then((res) => {
+          toast.success(res.data.message);
+          setIsAuthenticated(true);
+          navigateTo("/");
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPhone("");
+          setNic("");
+          setDob("");
+          setGender("");
+          setPassword("");
+        });
     } catch (error) {
-      console.error(error); // Log the complete error object
-      toast.error(
-        error.response?.data?.message || "Registration failed. Please try again."
-      );
+      toast.error(error.response.data.message);
     }
   };
 

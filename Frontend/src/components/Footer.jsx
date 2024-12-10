@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLocationArrow, FaPhone } from "react-icons/fa"; // Use "fa" for Font Awesome icons
+import { FaLocationArrow, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-
 
 const Footer = () => {
   const hours = [
@@ -44,12 +43,13 @@ const Footer = () => {
         <hr />
         <div className="content">
           <div>
+            <img src="/logo.png" alt="logo" className="logo-img"/>
           </div>
           <div>
             <h4>Quick Links</h4>
             <ul>
               <Link to={"/"}>Home</Link>
-              <Link to={"/appointment"}>Booking</Link>
+              <Link to={"/appointment"}>Appointment</Link>
               <Link to={"/about"}>About</Link>
             </ul>
           </div>
@@ -72,11 +72,11 @@ const Footer = () => {
             </div>
             <div>
               <MdEmail />
-              <span>k@gmail.com</span>
+              <span>kanjul@gmail.com</span>
             </div>
             <div>
               <FaLocationArrow />
-              <span>Bhopal, Madhya Pradesh</span>
+              <span>Bhopal, MP</span>
             </div>
           </div>
         </div>
