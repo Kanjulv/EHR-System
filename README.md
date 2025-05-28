@@ -1,4 +1,4 @@
-EHR Management System
+**EHR Management System
 
 Overview
 The EHR Management System is a web application designed to manage electronic health records efficiently and securely. It enables healthcare providers to store, retrieve, and update patient information seamlessly, improving the quality of care and administrative workflow.
@@ -43,3 +43,4 @@ MongoDB instance (local or cloud, e.g., MongoDB Atlas)
 
 Installation
 Clone the repo
+**
