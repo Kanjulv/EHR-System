@@ -1,5 +1,4 @@
-**EHR Management System
-
+EHR Management System
 Overview
 The EHR Management System is a web application designed to manage electronic health records efficiently and securely. It enables healthcare providers to store, retrieve, and update patient information seamlessly, improving the quality of care and administrative workflow.
 
@@ -43,4 +42,92 @@ MongoDB instance (local or cloud, e.g., MongoDB Atlas)
 
 Installation
 Clone the repo
-**
+
+bash
+Copy
+Edit
+git clone https://github.com/Kanjulv/EHR-System.git
+cd EHR-System
+Install backend dependencies
+
+bash
+Copy
+Edit
+cd backend
+npm install
+Install frontend dependencies
+
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+Set up environment variables
+
+Create a .env file in the backend folder with:
+
+env
+Copy
+Edit
+PORT=4000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_SECRET=your_cloudinary_api_secret
+For frontend, you can create a .env file in frontend with:
+
+env
+Copy
+Edit
+REACT_APP_API_URL=http://localhost:4000/api
+Running the app locally
+Start the backend server
+
+bash
+Copy
+Edit
+cd backend
+npm start
+Start the frontend
+
+bash
+Copy
+Edit
+cd ../frontend
+npm start
+The React app will run on http://localhost:3000 and connect to the backend API.
+
+Deployment
+You can deploy the backend and frontend separately on platforms like Render, Heroku, Vercel, or Netlify. Make sure to update environment variables accordingly and configure CORS in your backend to allow frontend URLs.
+
+Folder Structure
+csharp
+Copy
+Edit
+EHR-System/
+├── backend/         # Node.js + Express backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── utils/
+│   ├── app.js
+│   └── ...
+├── frontend/        # React frontend
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+└── README.md
+Known Issues
+[Add any known bugs or limitations here]
+
+Contributing
+Contributions are welcome! Please fork the repository and create a pull request for review.
+
+License
+MIT License
+
+Contact
+Kanjul Verma – GitHub Profile
